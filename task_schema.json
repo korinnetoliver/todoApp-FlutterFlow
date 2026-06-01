@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/tasks.schema.json",
+  "title": "Task",
+  "type": "object",
+  "properties": {
+    "completed": {
+      "type": "boolean"
+    },
+    "details": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "user": {
+      "type": "string",
+      "pattern": "^/users/[A-Za-z0-9]+$",
+      "description": "Firestore document reference to a user document"
+    }
+  },
+  "required": [
+    "completed",
+    "details",
+    "title",
+    "user"
+  ],
+  "additionalProperties": false
+}
