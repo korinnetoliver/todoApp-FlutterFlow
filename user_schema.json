@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/users.schema.json",
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "birthday": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Firestore Timestamp"
+    },
+    "created_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Firestore Timestamp"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "photo_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "uid": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "birthday",
+    "created_time",
+    "display_name",
+    "email",
+    "photo_url",
+    "uid"
+  ],
+  "additionalProperties": false
+}
